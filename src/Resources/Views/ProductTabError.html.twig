@@ -1,0 +1,33 @@
+<script>
+
+    function appendErrorToTheForm(menuTabs, errorDataTabs) {
+        if (undefined === menuTabs) {
+            return;
+        }
+        let links = menuTabs.find('a');
+        const errorInfo = '<i class="icon exclamation circle red"></i>';
+        links.each((key, val) => {
+            if (errorDataTabs.includes($(val).attr('data-tab'))) {
+                $(val).append(errorInfo);
+            }
+        });
+    }
+
+    let dataTabs = [];
+    $(".field").each(function (key, val) {
+        if ($(val).hasClass('error')) {
+            let parentTab = $(val).closest(
+                '.tab'
+            );
+            let prospectParent = $(parentTab).data();
+            if (undefined === prospectParent || !prospectParent.hasOwnProperty('tab')) {
+                return;
+            }
+            dataTabs.push(prospectParent.tab);
+        }
+    });
+
+    let menuTabs = $('form[name="sylius_product"]').find('.three.wide.column');
+    appendErrorToTheForm(menuTabs, dataTabs);
+
+</script>

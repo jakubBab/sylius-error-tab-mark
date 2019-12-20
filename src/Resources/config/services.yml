@@ -1,0 +1,6 @@
+app.block_event_listener.product.update:
+    class: Sylius\Bundle\UiBundle\Block\BlockEventListener
+    arguments:
+        - 'ProductTabError.html.twig'
+    tags:
+        - { name: kernel.event_listener, event: sonata.block.event.sylius.admin.product.update.javascripts, method: onBlockEvent }

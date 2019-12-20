@@ -1,0 +1,27 @@
+{
+    "name": "digitalFactory/sylius-product-tab-error-mark",
+    "type": "sylius-plugin",
+    "description": "Product tab error indicator",
+    "license": "MIT",
+    "require": {
+        "php": "^7.1",
+        "sylius/sylius": "^1.0"
+    },
+    "require-dev": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "DigitalFactory\\SyliusProductTabErrorMarkPlugin\\": "src/",
+        }
+    },
+    "conflict": {
+        "sylius/sylius": "1.1.3 || 1.1.4",
+        "symfony/symfony": "3.4.7"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\SitemapPlugin\\": "tests/"
+        }
+    }
+}
