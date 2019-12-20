@@ -1,5 +1,5 @@
 {
-    "name": "digitalFactory/sylius-product-tab-error-mark",
+    "name": "digitalfactory/sylius-product-tab-error-mark",
     "type": "sylius-plugin",
     "description": "Product tab error indicator",
     "license": "MIT",
