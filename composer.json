@@ -12,7 +12,7 @@
     },
     "autoload": {
         "psr-4": {
-            "DigitalFactory\\SyliusProductTabErrorMarkPlugin\\": "src/",
+            "DigitalFactory\\SyliusProductTabErrorMarkPlugin\\": "src/"
         }
     },
     "conflict": {
